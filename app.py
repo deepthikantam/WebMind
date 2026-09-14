@@ -6,7 +6,7 @@ from config import get_anakin_key, get_gemini_key
 
 # Page setup
 st.set_page_config(
-    page_title="WebMind Control | Autonomous AI Agent",
+    page_title="WebMind | Autonomous AI Agent",
     page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -60,7 +60,7 @@ st.markdown("""
 # -------------------------------------------------------------
 with st.sidebar:
     st.image("https://img.icons8.com/isometric/100/artificial-intelligence.png", width=64)
-    st.title("WebMind Control")
+    st.title("WebMind")
     st.caption("🏆 Built for **Anakin Forge Hackathon 2026**")
     
     st.markdown("---")
@@ -122,7 +122,7 @@ with st.sidebar:
 # -------------------------------------------------------------
 # MAIN CONTENT AREA
 # -------------------------------------------------------------
-st.markdown('<div class="main-header">🧠 WebMind Control: Autonomous Web Agent</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">🧠 WebMind: Autonomous Web Agent</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Anakin.io (Live Web Execution Layer) + Google Gemini (Cognitive Brain Layer)</div>', unsafe_allow_html=True)
 
 # Observable Agent Pipeline Banner
@@ -154,7 +154,7 @@ user_query = st.text_area(
     "Enter agent objective or decision task:",
     value=default_query,
     height=90,
-    help="Describe the research or evaluation goal you want WebMind Control to execute autonomously."
+    help="Describe the research or evaluation goal you want WebMind to execute autonomously."
 )
 
 col_act1, col_act2 = st.columns([3, 1])
