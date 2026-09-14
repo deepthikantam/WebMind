@@ -1,7 +1,7 @@
 # 🧠 WebMind : Autonomous Web Agent
 > Built for the **Anakin Forge Hackathon 2026** — *"Build AI Agents That Read, Reason, and Act."*
 
-WebMind is an autonomous AI agent that goes beyond passive chatbots. It accepts complex, real-world research or procurement goals, searches and reads live web pages via **Anakin.io**, reasons through tradeoffs and observations using **Google Gemini**, and executes an actionable workflow by compiling verified decision shortlists and battlecards with ground-truth citations.
+WebMind is an autonomous AI agent that goes beyond passive chatbots. It accepts complex, real-world research or procurement goals, searches and reads live web pages via **Anakin.io**, reasons through tradeoffs and observations using **Google Gemini**, and executes an actionable workflow by compiling verified decision shortlists, action cards, and battlecards grounded in live web evidence.
 
 ---
 
@@ -13,7 +13,7 @@ $$\text{PLAN} \longrightarrow \text{TOOL} \longrightarrow \text{OBSERVE} \longri
 
 1. **Active Perception**: Proactively gathers live web evidence via the official **Anakin Search** and **URL Scraper** APIs.
 2. **Multi-Step Cognition**: Audits incoming evidence, detects information gaps, and reasons about next actions.
-3. **Action Execution**: Produces structured decision matrices, triggers deep page verification, and dispatches external webhook alerts.
+3. **Action Execution**: Performs deep page verification, produces structured action artifacts, and can optionally dispatch webhook alerts.
 4. **Self-Verification**: Automatically audits its synthesized outcome against the user's original constraints before returning the final result.
 
 ---
@@ -31,7 +31,7 @@ $$\text{PLAN} \longrightarrow \text{TOOL} \longrightarrow \text{OBSERVE} \longri
                      ↓
 [Stage 4: REASON] 🧠 Gemini evaluates observations, checks for gaps, decides next tool
                      ↓
-[Stage 5: ACT]    ⚡ Anakin Scraper verifies target URL + compiles decision matrix
+[Stage 5: ACT]    ⚡ Anakin Scraper retrieves and verifies the selected official page
                      ↓
 [Stage 6: VERIFY] ✅ Gemini audits final result against initial constraints
                      ↓
@@ -44,7 +44,7 @@ $$\text{PLAN} \longrightarrow \text{TOOL} \longrightarrow \text{OBSERVE} \longri
 
 | Layer | Component | Official API / SDK | Exact Responsibility |
 | :--- | :--- | :--- | :--- |
-| **Web Perception & Execution** | **Anakin.io** | `anakin-sdk` (Python) | • `client.search()`: Live web search + content retrieval<br>• `client.scrape()`: Deep markdown extraction for verification<br>• `client.agentic_search()`: Multi-stage research pipeline |
+| **Web Perception & Execution** | **Anakin.io** | `anakin-sdk` (Python) | • `client.search()`: Live web search + content retrieval<br>• `client.scrape()`: Deep markdown extraction for verification |
 | **Cognitive & Planning Brain** | **Google Gemini** | `google-genai` (Python) | • `plan_research()`: Task deconstruction<br>• `reason_over_observation()`: Gap detection & action selection<br>• `generate_battlecard()`: Structured synthesis<br>• `verify_result()`: Constraint audit |
 | **Interface & Presentation** | **Streamlit** | `streamlit` | • Single-page reactive dashboard<br>• Real-time observable trace stepper<br>• One-click Markdown & JSON artifact exports |
 
@@ -106,10 +106,10 @@ Open your browser at `http://localhost:8501`.
       * 🔎 **TOOL**: Anakin Search queried live web sources.
       * 📖 **OBSERVE**: Ingested live web results into the observation buffer.
       * 🧠 **REASON**: Gemini evaluated candidates, selected the top choice, and targeted the official URL.
-      * ⚡ **ACT**: Agent actively opened official page via Anakin URL Scraper, extracted verified registration gateway, deadlines, and required fields into an Action Execution Card.
+      * ⚡ **ACT**: Agent actively opened the official page via Anakin URL Scraper and extracted verified page details, including the registration section or direct registration gateway when available, into an Action Execution Card.
       * ✅ **VERIFY**: Self-audit verified official portal access and registration link validity.
 3. **The Results (1:30 - 2:30)**:
-    * Show the **⚡ Verified Action Execution Card** with Anakin Scraper execution proof and direct registration gateway.
+   * Show the **⚡ Verified Action Execution Card** with Anakin Scraper execution proof and the grounded registration section or direct registration gateway when available.
     * Show the **Comparative Shortlist Matrix** table.
     * Highlight the **Verification Audit** (Status: `VERIFIED`, 95%+ confidence).
     * Click one of the live ground-truth citations to prove real web grounding.
