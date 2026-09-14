@@ -1,13 +1,13 @@
-# 🧠 WebMind Control: Autonomous Web Agent
+# 🧠 WebMind : Autonomous Web Agent
 > Built for the **Anakin Forge Hackathon 2026** — *"Build AI Agents That Read, Reason, and Act."*
 
-WebMind Control is an autonomous AI agent that goes beyond passive chatbots. It accepts complex, real-world research or procurement goals, searches and reads live web pages via **Anakin.io**, reasons through tradeoffs and observations using **Google Gemini**, and executes an actionable workflow by compiling verified decision shortlists and battlecards with ground-truth citations.
+WebMind is an autonomous AI agent that goes beyond passive chatbots. It accepts complex, real-world research or procurement goals, searches and reads live web pages via **Anakin.io**, reasons through tradeoffs and observations using **Google Gemini**, and executes an actionable workflow by compiling verified decision shortlists and battlecards with ground-truth citations.
 
 ---
 
-## 🎯 What Makes WebMind Control an AI Agent?
+## 🎯 What Makes WebMind an AI Agent?
 
-Unlike a standard chatbot that provides a static, single-turn answer based on stale training data, WebMind Control executes an **observable, closed-loop agentic workflow**:
+Unlike a standard chatbot that provides a static, single-turn answer based on stale training data, WebMind executes an **observable, closed-loop agentic workflow**:
 
 $$\text{PLAN} \longrightarrow \text{TOOL} \longrightarrow \text{OBSERVE} \longrightarrow \text{REASON} \longrightarrow \text{ACT} \longrightarrow \text{VERIFY} \longrightarrow \text{RESULT}$$
 
@@ -97,7 +97,7 @@ Open your browser at `http://localhost:8501`.
 ## 🎥 3-Minute Video Demo Script
 
 1. **The Hook (0:00 - 0:30)**:
-   * Explain: *"Most hackathon entries are chatbots that guess answers from old data. WebMind Control is an autonomous agent that reads live web pages via Anakin.io, reasons over observations with Gemini, and executes verified workflows."*
+   * Explain: *"Most hackathon entries are chatbots that guess answers from old data. WebMind is an autonomous agent that reads live web pages via Anakin.io, reasons over observations with Gemini, and executes verified workflows."*
 2. **The Dispatch (0:30 - 1:30)**:
    * Select the featured preset: *"🏆 AI Hackathon Scout (Deadlines, prizes, format & shortlist)"*.
    * Click **"Dispatch Autonomous Agent Loop"**.
